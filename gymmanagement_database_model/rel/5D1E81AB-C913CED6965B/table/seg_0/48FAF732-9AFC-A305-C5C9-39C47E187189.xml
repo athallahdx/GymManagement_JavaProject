@@ -60,6 +60,18 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="member_date_of_birth" id="248A72C7-E178-2589-8AAB-3621F1CAC1E0">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 14:38:59 UTC</createdTime>
+<generatorID>359DDC02-93A2-74BD-DDA7-54BBDA492FA0</generatorID>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="C744F4FF-C8B2-6F67-E326-CDE3A51B5990" name="trainer_assignments_PK">

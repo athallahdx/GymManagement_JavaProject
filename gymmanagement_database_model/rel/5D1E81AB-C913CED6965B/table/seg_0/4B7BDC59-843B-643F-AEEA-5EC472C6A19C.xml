@@ -41,7 +41,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="current_membership_start" id="CFF98644-DD98-3F16-A82E-A6A04EA0E3EE">
+<Column name="last_payment_date" id="CFF98644-DD98-3F16-A82E-A6A04EA0E3EE">
 <createdBy>ASUS TUF</createdBy>
 <createdTime>2024-10-18 13:25:16 UTC</createdTime>
 <generatorID>DE105C5C-E08C-63CA-4AA5-418AA3C1A901</generatorID>
@@ -53,7 +53,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="current_membership_due" id="F54AFDC0-D4A5-BA96-86A0-D85763259ECF">
+<Column name="current_payment_due" id="F54AFDC0-D4A5-BA96-86A0-D85763259ECF">
 <createdBy>ASUS TUF</createdBy>
 <createdTime>2024-10-18 13:25:16 UTC</createdTime>
 <generatorID>480E862B-404F-84DE-DF65-499D1E981930</generatorID>
@@ -75,6 +75,39 @@
 <logicalDatatype>LOGDT006</logicalDatatype>
 <dataTypeSize>1</dataTypeSize>
 <ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="member_sex" id="E886305E-54D4-6F6A-9E28-F9AC3AEC57A6">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 14:38:59 UTC</createdTime>
+<generatorID>0773922E-2AC6-AA08-AFBB-B9B938467598</generatorID>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="membe_phonenumber" id="F616C195-C359-C789-3B29-B806929E7D16">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 14:38:59 UTC</createdTime>
+<generatorID>B4398911-096B-47BA-D96E-665253C11CFA</generatorID>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="member_date_of_birth" id="4B4DAD8E-1763-BE1C-17AC-BF6DD663C3BE">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 14:38:59 UTC</createdTime>
+<generatorID>CD77EBCC-8A18-8894-2B1B-AB599B5A8D31</generatorID>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>

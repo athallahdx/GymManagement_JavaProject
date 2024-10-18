@@ -4,11 +4,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-/**
- *
- * @author Java Programming with Aldrin
- */
-
 public class DatabaseConnection {
 
     private static Connection con;
@@ -18,7 +13,7 @@ public class DatabaseConnection {
             try {
                 if (this.getCon() == null || this.getCon().isClosed()) {
                     try {
-                        String url = "jdbc:mysql://localhost/student_list";     
+                        String url = "jdbc:mysql://localhost/gymmanagementapp";     
                         Class.forName("com.mysql.cj.jdbc.Driver"); 
                         setCon(DriverManager.getConnection(url, "root", ""));
                     } catch (Exception e) {

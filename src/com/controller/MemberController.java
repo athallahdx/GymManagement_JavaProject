@@ -1,5 +1,5 @@
 package com.controller;
 
-public class MemberController {
-
+public class MemberController{
+	
 }

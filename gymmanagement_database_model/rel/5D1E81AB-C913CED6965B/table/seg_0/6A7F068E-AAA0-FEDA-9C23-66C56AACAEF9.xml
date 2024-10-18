@@ -75,6 +75,18 @@
 <colAssociation fkAssociation="BE6729D7-F4ED-339A-595B-04F6DDAC78A1" referredColumn="F4799804-645D-E8A5-1615-66168E97148E"/>
 </associations>
 </Column>
+<Column name="member_date_of_birth" id="FBC352B5-BD67-C8C6-6B4E-1BE125B57BB6">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 14:38:59 UTC</createdTime>
+<generatorID>96E9CF64-FD60-2215-52AA-5567B04C4D0B</generatorID>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="D1C50E22-1702-6F69-02A6-7953C1FCB082" name="ClassBookings_PK">
@@ -89,6 +101,7 @@
 <colUsage columnID="3FBCEBE0-6254-B330-6C46-1CABAEC06828"/>
 <colUsage columnID="937990E3-588E-4959-82B0-BBB156A9EDC2"/>
 <colUsage columnID="C5709A1F-C65B-E05F-DFD1-3C0F40CBBF98"/>
+<colUsage columnID="FBC352B5-BD67-C8C6-6B4E-1BE125B57BB6"/>
 <colUsage columnID="FDE15972-4FEE-58C8-385B-E0279D6B2F15"/>
 <colUsage columnID="8C892566-604D-8B35-DD20-3CABC866D6CE"/>
 </indexColumnUsage>
