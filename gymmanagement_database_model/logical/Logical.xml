@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="DE683567-C856-2B98-6558-E5E6F63E5BA8" mainViewID="164D5872-82F2-A610-55AE-3B3605C041D9">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 12:59:25 UTC</createdTime>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

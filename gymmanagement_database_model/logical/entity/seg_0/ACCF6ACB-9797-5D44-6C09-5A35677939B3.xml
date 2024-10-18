@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="ACCF6ACB-9797-5D44-6C09-5A35677939B3" name="trainer_assignments">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:11:19 UTC</createdTime>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<engineerTo>
+<item key="5D1E81AB-27D3-B7CF-2D3F-C913CED6965B" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="assignment_id" id="803660CE-E9FF-00E9-69E6-CC2A53BC0E4C">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:12:05 UTC</createdTime>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<engineerTo>
+<item key="5D1E81AB-27D3-B7CF-2D3F-C913CED6965B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="member_id" id="22DFF595-AD03-2C1B-E179-C1D2CA2D3CF9">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:13:32 UTC</createdTime>
+<generatorID>33D6E27E-92A2-C850-683F-9DEE040A76A4</generatorID>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<engineerTo>
+<item key="5D1E81AB-27D3-B7CF-2D3F-C913CED6965B" value="true"/>
+</engineerTo>
+<referedAttribute>099E20C0-294D-1917-1E74-AD1CB2B1EC8F</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="trainer_id" id="33C5A3AD-160F-D9F0-6782-2287FD246059">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:13:52 UTC</createdTime>
+<generatorID>19F7AADA-1B36-3902-E9DC-48B5F69673F1</generatorID>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<engineerTo>
+<item key="5D1E81AB-27D3-B7CF-2D3F-C913CED6965B" value="true"/>
+</engineerTo>
+<referedAttribute>B4193766-9E3C-5CDB-F0FF-BC7D77645499</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="assigned_date" id="25D2051D-9034-E40A-0B56-C7FAEB74AA76">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:12:18 UTC</createdTime>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<engineerTo>
+<item key="5D1E81AB-27D3-B7CF-2D3F-C913CED6965B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="CF6C4214-3782-745F-7421-E0F9FB6F5F20" name="trainer_assignments PK">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:12:17 UTC</createdTime>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<engineerTo>
+<item key="5D1E81AB-27D3-B7CF-2D3F-C913CED6965B" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>803660CE-E9FF-00E9-69E6-CC2A53BC0E4C</attributeRef>
+<attributeRef>25D2051D-9034-E40A-0B56-C7FAEB74AA76</attributeRef>
+<attributeRef>22DFF595-AD03-2C1B-E179-C1D2CA2D3CF9</attributeRef>
+<attributeRef>33C5A3AD-160F-D9F0-6782-2287FD246059</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

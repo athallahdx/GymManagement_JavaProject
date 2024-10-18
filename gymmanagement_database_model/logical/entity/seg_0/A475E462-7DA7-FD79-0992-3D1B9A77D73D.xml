@@ -1,0 +1,103 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A475E462-7DA7-FD79-0992-3D1B9A77D73D" name="ClassBookings">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:19:06 UTC</createdTime>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<engineerTo>
+<item key="5D1E81AB-27D3-B7CF-2D3F-C913CED6965B" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="booking_id" id="5B7B486A-9377-114B-EE19-985577106E66">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:19:19 UTC</createdTime>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<engineerTo>
+<item key="5D1E81AB-27D3-B7CF-2D3F-C913CED6965B" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="booking_date" id="8C4F3509-2E59-78A9-8D3F-998A95B7CA09">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:19:49 UTC</createdTime>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<engineerTo>
+<item key="5D1E81AB-27D3-B7CF-2D3F-C913CED6965B" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="class_id" id="C64B5F15-561C-41D5-7BFA-96754F2892BF">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:20:36 UTC</createdTime>
+<generatorID>1C1513DC-CDB4-EC2B-72BC-48B7D447518E</generatorID>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<engineerTo>
+<item key="5D1E81AB-27D3-B7CF-2D3F-C913CED6965B" value="true"/>
+</engineerTo>
+<referedAttribute>85E07E81-F1D4-E58F-AD58-CC8FFD69C9D7</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="schedule_days" id="88C2D02B-1CEB-0B48-1697-B0F4754EC365">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:20:36 UTC</createdTime>
+<generatorID>1C1513DC-CDB4-EC2B-72BC-48B7D447518E</generatorID>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<engineerTo>
+<item key="5D1E81AB-27D3-B7CF-2D3F-C913CED6965B" value="true"/>
+</engineerTo>
+<referedAttribute>CD5D79AD-A89C-5E1D-C972-720570659027</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="member_id" id="AEE85055-B08F-A6C5-6C82-82273F1177CA">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:20:46 UTC</createdTime>
+<generatorID>C24A8C4B-FB75-7946-3256-542B75963CE6</generatorID>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<engineerTo>
+<item key="5D1E81AB-27D3-B7CF-2D3F-C913CED6965B" value="true"/>
+</engineerTo>
+<referedAttribute>099E20C0-294D-1917-1E74-AD1CB2B1EC8F</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="0294782B-8435-AD8A-6EF6-9BEC30DE7107" name="ClassBookings PK">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:20:36 UTC</createdTime>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<engineerTo>
+<item key="5D1E81AB-27D3-B7CF-2D3F-C913CED6965B" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>C64B5F15-561C-41D5-7BFA-96754F2892BF</attributeRef>
+<attributeRef>88C2D02B-1CEB-0B48-1697-B0F4754EC365</attributeRef>
+<attributeRef>AEE85055-B08F-A6C5-6C82-82273F1177CA</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

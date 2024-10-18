@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="gymmanagement_database_model" id="5437E1C8-AF59-34D9-6F97-FF89D0B23803" version="3.5">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 12:59:25 UTC</createdTime>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>5437E1C8-AF59-34D9-6F97-FF89D0B23803</designId>
+</OSDM_Design>

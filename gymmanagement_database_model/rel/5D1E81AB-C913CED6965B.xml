@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="Relational_1" id="5D1E81AB-27D3-B7CF-2D3F-C913CED6965B" mainViewID="DF65B7FD-6E72-CA36-8EC2-ACA7DB23994A">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 12:59:28 UTC</createdTime>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+<selectedRDBMSSite>32076570-2523-435C-2E92-BF29817DFF70</selectedRDBMSSite>
+</relationalModel>

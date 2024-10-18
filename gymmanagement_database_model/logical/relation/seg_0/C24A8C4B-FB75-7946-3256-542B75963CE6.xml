@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="book_a_class" directorySegmentName="seg_0" id="C24A8C4B-FB75-7946-3256-542B75963CE6">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:20:46 UTC</createdTime>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<engineerTo>
+<item key="5D1E81AB-27D3-B7CF-2D3F-C913CED6965B" value="true"/>
+</engineerTo>
+<sourcePk>3341DD6D-E53F-C271-C847-59C514785269</sourcePk>
+<identifying>true</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>38FE58A8-3F1F-BA69-FEBD-233314F5F725</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>A475E462-7DA7-FD79-0992-3D1B9A77D73D</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
