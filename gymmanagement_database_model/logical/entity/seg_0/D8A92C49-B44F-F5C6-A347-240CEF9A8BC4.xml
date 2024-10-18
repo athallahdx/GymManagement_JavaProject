@@ -96,8 +96,9 @@
 <createdBy>ASUS TUF</createdBy>
 <createdTime>2024-10-18 13:16:14 UTC</createdTime>
 <ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="5D1E81AB-27D3-B7CF-2D3F-C913CED6965B" value="true"/>
+<item key="5D1E81AB-27D3-B7CF-2D3F-C913CED6965B" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

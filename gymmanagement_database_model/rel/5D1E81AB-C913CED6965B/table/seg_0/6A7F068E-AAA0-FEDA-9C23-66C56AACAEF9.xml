@@ -1,0 +1,120 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6A7F068E-AAA0-FEDA-9C23-66C56AACAEF9" name="ClassBookings">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:25:16 UTC</createdTime>
+<generatorID>A475E462-7DA7-FD79-0992-3D1B9A77D73D</generatorID>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="booking_id" id="FDE15972-4FEE-58C8-385B-E0279D6B2F15">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:25:16 UTC</createdTime>
+<generatorID>5B7B486A-9377-114B-EE19-985577106E66</generatorID>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="booking_date" id="8C892566-604D-8B35-DD20-3CABC866D6CE">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:25:16 UTC</createdTime>
+<generatorID>8C4F3509-2E59-78A9-8D3F-998A95B7CA09</generatorID>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="GymClasses_class_id" id="3FBCEBE0-6254-B330-6C46-1CABAEC06828">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:25:16 UTC</createdTime>
+<generatorID>C64B5F15-561C-41D5-7BFA-96754F2892BF</generatorID>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AF5BB5F7-3381-D1D2-E635-2C01E9477E69" referredColumn="9894EFF6-0D01-027E-749E-0E163AD49A22"/>
+</associations>
+</Column>
+<Column name="GymClasses_schedule_days" id="937990E3-588E-4959-82B0-BBB156A9EDC2">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:25:16 UTC</createdTime>
+<generatorID>88C2D02B-1CEB-0B48-1697-B0F4754EC365</generatorID>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AF5BB5F7-3381-D1D2-E635-2C01E9477E69" referredColumn="E3386B42-167C-1D1B-F890-9BEA6FAFBA95"/>
+</associations>
+</Column>
+<Column name="Members_member_id" id="C5709A1F-C65B-E05F-DFD1-3C0F40CBBF98">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:25:16 UTC</createdTime>
+<generatorID>AEE85055-B08F-A6C5-6C82-82273F1177CA</generatorID>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BE6729D7-F4ED-339A-595B-04F6DDAC78A1" referredColumn="F4799804-645D-E8A5-1615-66168E97148E"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D1C50E22-1702-6F69-02A6-7953C1FCB082" name="ClassBookings_PK">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:25:16 UTC</createdTime>
+<generatorID>0294782B-8435-AD8A-6EF6-9BEC30DE7107</generatorID>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3FBCEBE0-6254-B330-6C46-1CABAEC06828"/>
+<colUsage columnID="937990E3-588E-4959-82B0-BBB156A9EDC2"/>
+<colUsage columnID="C5709A1F-C65B-E05F-DFD1-3C0F40CBBF98"/>
+<colUsage columnID="FDE15972-4FEE-58C8-385B-E0279D6B2F15"/>
+<colUsage columnID="8C892566-604D-8B35-DD20-3CABC866D6CE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7D2AB5FD-E1AB-01B9-64F1-81FEBEF79238" name="ClassBookings_Members_FK">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:25:16 UTC</createdTime>
+<generatorID>C24A8C4B-FB75-7946-3256-542B75963CE6</generatorID>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C5709A1F-C65B-E05F-DFD1-3C0F40CBBF98"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F879E9B9-5809-9592-D382-FB698F9BD56B" name="ClassBookings_GymClasses_FK">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:25:16 UTC</createdTime>
+<generatorID>1C1513DC-CDB4-EC2B-72BC-48B7D447518E</generatorID>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3FBCEBE0-6254-B330-6C46-1CABAEC06828"/>
+<colUsage columnID="937990E3-588E-4959-82B0-BBB156A9EDC2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

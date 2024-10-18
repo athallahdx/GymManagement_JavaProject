@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="AF5BB5F7-3381-D1D2-E635-2C01E9477E69" containerWithKeyObject="6A7F068E-AAA0-FEDA-9C23-66C56AACAEF9" localFKIndex="F879E9B9-5809-9592-D382-FB698F9BD56B" name="ClassBookings_GymClasses_FK">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:25:16 UTC</createdTime>
+<generatorID>1C1513DC-CDB4-EC2B-72BC-48B7D447518E</generatorID>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<referredTableLongName>GymClasses</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>EF2906A5-7FBA-417E-51C3-F08CE9DD694B</referredTableID>
+<keyObject>2606D893-E765-B366-1457-B65B60E28AFC</keyObject>
+<referredKeyID>2606D893-E765-B366-1457-B65B60E28AFC</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>class_id,schedule_days</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

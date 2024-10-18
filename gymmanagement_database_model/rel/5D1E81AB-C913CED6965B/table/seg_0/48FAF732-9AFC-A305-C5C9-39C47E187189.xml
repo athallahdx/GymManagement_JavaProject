@@ -1,0 +1,103 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="48FAF732-9AFC-A305-C5C9-39C47E187189" name="trainer_assignments">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:25:16 UTC</createdTime>
+<generatorID>ACCF6ACB-9797-5D44-6C09-5A35677939B3</generatorID>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="assignment_id" id="842AC41E-6969-9D6B-883F-5C55A538DA45">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:25:16 UTC</createdTime>
+<generatorID>803660CE-E9FF-00E9-69E6-CC2A53BC0E4C</generatorID>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Members_member_id" id="2F70BEC6-D4E0-E2B6-480B-2BC5F4DABBA9">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:25:16 UTC</createdTime>
+<generatorID>22DFF595-AD03-2C1B-E179-C1D2CA2D3CF9</generatorID>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="47038323-AC45-6787-A49A-D93A905D204B" referredColumn="F4799804-645D-E8A5-1615-66168E97148E"/>
+</associations>
+</Column>
+<Column name="PersonalTrainer_trainer_id" id="9F464B21-6DC1-C669-8EED-DF87BF4F7E4E">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:25:16 UTC</createdTime>
+<generatorID>33C5A3AD-160F-D9F0-6782-2287FD246059</generatorID>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5A105264-D3CE-40CF-5033-2FB624E7AE25" referredColumn="96B3DA9E-2CB1-B144-F80A-E238DAB5B16B"/>
+</associations>
+</Column>
+<Column name="assigned_date" id="7C117925-2B21-93D7-9BA0-E03E9AA36A66">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:25:16 UTC</createdTime>
+<generatorID>25D2051D-9034-E40A-0B56-C7FAEB74AA76</generatorID>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C744F4FF-C8B2-6F67-E326-CDE3A51B5990" name="trainer_assignments_PK">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:25:16 UTC</createdTime>
+<generatorID>CF6C4214-3782-745F-7421-E0F9FB6F5F20</generatorID>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="842AC41E-6969-9D6B-883F-5C55A538DA45"/>
+<colUsage columnID="7C117925-2B21-93D7-9BA0-E03E9AA36A66"/>
+<colUsage columnID="2F70BEC6-D4E0-E2B6-480B-2BC5F4DABBA9"/>
+<colUsage columnID="9F464B21-6DC1-C669-8EED-DF87BF4F7E4E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3D1C6F8E-80CF-8827-E4A1-CC075FD7FA6A" name="trainer_assignments_PersonalTrainer_FK">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:25:16 UTC</createdTime>
+<generatorID>19F7AADA-1B36-3902-E9DC-48B5F69673F1</generatorID>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9F464B21-6DC1-C669-8EED-DF87BF4F7E4E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7A0C58AA-1DF6-5089-90A8-93651712D9E0" name="trainer_assignments_Members_FK">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:25:16 UTC</createdTime>
+<generatorID>33D6E27E-92A2-C850-683F-9DEE040A76A4</generatorID>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2F70BEC6-D4E0-E2B6-480B-2BC5F4DABBA9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

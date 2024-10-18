@@ -39,6 +39,42 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="member_sex" id="0773922E-2AC6-AA08-AFBB-B9B938467598">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:44:09 UTC</createdTime>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<engineerTo>
+<item key="5D1E81AB-27D3-B7CF-2D3F-C913CED6965B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="membe_phonenumber" id="B4398911-096B-47BA-D96E-665253C11CFA">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:46:03 UTC</createdTime>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<engineerTo>
+<item key="5D1E81AB-27D3-B7CF-2D3F-C913CED6965B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="member_date_of_birth" id="CD77EBCC-8A18-8894-2B1B-AB599B5A8D31">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:45:11 UTC</createdTime>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<engineerTo>
+<item key="5D1E81AB-27D3-B7CF-2D3F-C913CED6965B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="membership_registered" id="AE9B6477-ED27-4EA0-8BCB-FF7A6665E44E">
 <createdBy>ASUS TUF</createdBy>
 <createdTime>2024-10-18 13:00:07 UTC</createdTime>
@@ -51,7 +87,7 @@
 <logicalDatatype>LOGDT008</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="current_membership_start" id="DE105C5C-E08C-63CA-4AA5-418AA3C1A901">
+<Attribute name="last_payment_date" id="DE105C5C-E08C-63CA-4AA5-418AA3C1A901">
 <createdBy>ASUS TUF</createdBy>
 <createdTime>2024-10-18 13:00:55 UTC</createdTime>
 <ownerDesignName>gymmanagement_database_model</ownerDesignName>
@@ -64,7 +100,7 @@
 <logicalDatatype>LOGDT008</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="current_membership_due" id="480E862B-404F-84DE-DF65-499D1E981930">
+<Attribute name="current_payment_due" id="480E862B-404F-84DE-DF65-499D1E981930">
 <createdBy>ASUS TUF</createdBy>
 <createdTime>2024-10-18 13:01:15 UTC</createdTime>
 <ownerDesignName>gymmanagement_database_model</ownerDesignName>
@@ -96,12 +132,14 @@
 <createdBy>ASUS TUF</createdBy>
 <createdTime>2024-10-18 12:59:52 UTC</createdTime>
 <ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="5D1E81AB-27D3-B7CF-2D3F-C913CED6965B" value="true"/>
+<item key="5D1E81AB-27D3-B7CF-2D3F-C913CED6965B" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>099E20C0-294D-1917-1E74-AD1CB2B1EC8F</attributeRef>
+<attributeRef>CD77EBCC-8A18-8894-2B1B-AB599B5A8D31</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

@@ -1,0 +1,96 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EF2906A5-7FBA-417E-51C3-F08CE9DD694B" name="GymClasses">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:25:16 UTC</createdTime>
+<generatorID>D8A92C49-B44F-F5C6-A347-240CEF9A8BC4</generatorID>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="class_id" id="9894EFF6-0D01-027E-749E-0E163AD49A22">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:25:16 UTC</createdTime>
+<generatorID>85E07E81-F1D4-E58F-AD58-CC8FFD69C9D7</generatorID>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="class_name" id="26D37C02-7F6B-B419-66C8-CEC306249830">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:25:16 UTC</createdTime>
+<generatorID>638C2334-CFB9-1054-0485-2312D829B318</generatorID>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="schedule_days" id="E3386B42-167C-1D1B-F890-9BEA6FAFBA95">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:25:16 UTC</createdTime>
+<generatorID>CD5D79AD-A89C-5E1D-C972-720570659027</generatorID>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="start_time" id="D1465284-9817-ED52-3B49-4AEFB8559254">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:25:16 UTC</createdTime>
+<generatorID>0BCE0A13-2690-8E05-66CC-8F6624005795</generatorID>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="end_time" id="EA181357-5582-E8E1-077F-7A8C4A1CC855">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:25:16 UTC</createdTime>
+<generatorID>2921986A-780E-DD65-91E3-31736A1EAC17</generatorID>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="quota" id="72DAC535-1829-7CA9-8EC2-A77A21539323">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:25:16 UTC</createdTime>
+<generatorID>F1D9F1A1-FD24-BD3D-2AB3-B1FEF520600C</generatorID>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2606D893-E765-B366-1457-B65B60E28AFC" name="GymClasses_PK">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:25:16 UTC</createdTime>
+<generatorID>ADD5E48E-6447-39B2-8551-5D161F8FED1D</generatorID>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9894EFF6-0D01-027E-749E-0E163AD49A22"/>
+<colUsage columnID="E3386B42-167C-1D1B-F890-9BEA6FAFBA95"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

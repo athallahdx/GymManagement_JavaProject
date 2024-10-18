@@ -39,6 +39,32 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="trainer_sex" id="0C3D9840-5845-F909-6F69-70110D14301B">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:51:16 UTC</createdTime>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<engineerTo>
+<item key="5D1E81AB-27D3-B7CF-2D3F-C913CED6965B" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="trainer_phonenumber" id="3D3BE5A1-BA7A-9D7C-DC2F-9563C86EB852">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:50:57 UTC</createdTime>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<engineerTo>
+<item key="5D1E81AB-27D3-B7CF-2D3F-C913CED6965B" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="current_assigned_member" id="CFEE5736-8720-E621-0266-B6F2AE6BAE26">
 <createdBy>ASUS TUF</createdBy>
 <createdTime>2024-10-18 13:10:12 UTC</createdTime>
@@ -58,8 +84,9 @@
 <createdBy>ASUS TUF</createdBy>
 <createdTime>2024-10-18 13:09:58 UTC</createdTime>
 <ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="5D1E81AB-27D3-B7CF-2D3F-C913CED6965B" value="true"/>
+<item key="5D1E81AB-27D3-B7CF-2D3F-C913CED6965B" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

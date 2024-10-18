@@ -1,0 +1,60 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8DAEA822-FA0A-28F8-F5C6-23001E965375" name="PersonalTrainer">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:25:16 UTC</createdTime>
+<generatorID>217FE14B-7A94-95CB-88D1-DEBD00289332</generatorID>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="trainer_id" id="96B3DA9E-2CB1-B144-F80A-E238DAB5B16B">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:25:16 UTC</createdTime>
+<generatorID>B4193766-9E3C-5CDB-F0FF-BC7D77645499</generatorID>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="trainer_name" id="21C72DA1-590D-17AB-C76E-9D89C2B61BE0">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:25:16 UTC</createdTime>
+<generatorID>F52191D6-D00A-6248-1E56-8E30A0D1750D</generatorID>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="current_assigned_member" id="563696E3-1E3C-864C-4ACD-43E4F1A9B4AD">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:25:16 UTC</createdTime>
+<generatorID>CFEE5736-8720-E621-0266-B6F2AE6BAE26</generatorID>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CDAF657B-CDC2-0E37-2A71-FA8B20DF1B03" name="PersonalTrainer_PK">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:25:16 UTC</createdTime>
+<generatorID>54400E4D-F5F2-5414-2E45-9D6572E3F60B</generatorID>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="96B3DA9E-2CB1-B144-F80A-E238DAB5B16B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

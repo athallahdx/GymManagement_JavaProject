@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="5A105264-D3CE-40CF-5033-2FB624E7AE25" containerWithKeyObject="48FAF732-9AFC-A305-C5C9-39C47E187189" localFKIndex="3D1C6F8E-80CF-8827-E4A1-CC075FD7FA6A" name="trainer_assignments_PersonalTrainer_FK">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:25:16 UTC</createdTime>
+<generatorID>19F7AADA-1B36-3902-E9DC-48B5F69673F1</generatorID>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<referredTableLongName>PersonalTrainer</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>8DAEA822-FA0A-28F8-F5C6-23001E965375</referredTableID>
+<keyObject>CDAF657B-CDC2-0E37-2A71-FA8B20DF1B03</keyObject>
+<referredKeyID>CDAF657B-CDC2-0E37-2A71-FA8B20DF1B03</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>trainer_id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

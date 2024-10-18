@@ -22,7 +22,6 @@
 <engineerTo>
 <item key="5D1E81AB-27D3-B7CF-2D3F-C913CED6965B" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -35,7 +34,6 @@
 <engineerTo>
 <item key="5D1E81AB-27D3-B7CF-2D3F-C913CED6965B" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT008</logicalDatatype>
@@ -83,6 +81,20 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="member_date_of_birth" id="96E9CF64-FD60-2215-52AA-5567B04C4D0B">
+<createdBy>ASUS TUF</createdBy>
+<createdTime>2024-10-18 13:45:48 UTC</createdTime>
+<generatorID>C24A8C4B-FB75-7946-3256-542B75963CE6</generatorID>
+<ownerDesignName>gymmanagement_database_model</ownerDesignName>
+<engineerTo>
+<item key="5D1E81AB-27D3-B7CF-2D3F-C913CED6965B" value="true"/>
+</engineerTo>
+<referedAttribute>CD77EBCC-8A18-8894-2B1B-AB599B5A8D31</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="0294782B-8435-AD8A-6EF6-9BEC30DE7107" name="ClassBookings PK">
@@ -97,6 +109,9 @@
 <attributeRef>C64B5F15-561C-41D5-7BFA-96754F2892BF</attributeRef>
 <attributeRef>88C2D02B-1CEB-0B48-1697-B0F4754EC365</attributeRef>
 <attributeRef>AEE85055-B08F-A6C5-6C82-82273F1177CA</attributeRef>
+<attributeRef>96E9CF64-FD60-2215-52AA-5567B04C4D0B</attributeRef>
+<attributeRef>5B7B486A-9377-114B-EE19-985577106E66</attributeRef>
+<attributeRef>8C4F3509-2E59-78A9-8D3F-998A95B7CA09</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>
