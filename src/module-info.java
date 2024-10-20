@@ -4,9 +4,13 @@ module GymManagement {
     requires javafx.fxml;
     requires java.sql;
 
-    exports com.model; // Export your model package if it contains public classes used outside
-    exports com.util; // Export the util package if it contains public classes used outside
+    // Export your packages so that other modules or parts of your application can access them
+    exports com.model;
+    exports com.util;
+    exports com.controller; // Add this line to export your controller
 
-    opens com.model to javafx.graphics, javafx.fxml, javafx.controls, com.util.DatabaseConnection; // If you have any FXML or other elements here;
-    opens com.util to javafx.fxml; // If you have any FXML or other elements here
+    // You need to open these packages to JavaFX runtime for reflection (like FXML loading)
+    opens com.controller to javafx.fxml;
+    opens com.model to javafx.fxml; // Open your model package to JavaFX if it's needed for FXML
+    opens com.util to javafx.fxml;  // Open util package if it is accessed via reflection (though not necessary unless reflection-based)
 }
