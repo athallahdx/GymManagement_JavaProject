@@ -1,6 +1,7 @@
 package com.controller;
 
-import com.model.Member;
+import com.model.MemberIn;
+import com.model.MemberOut;
 import com.util.AppQuery;
 
 import java.net.URL;
@@ -27,8 +28,6 @@ public class MemberFormController implements Initializable {
     @FXML
     public RadioButton femaleSexRadioButton;
     @FXML
-    public TextField phoneNumberField;
-    @FXML
     public DatePicker birthDatePicker;
     @FXML
     public RadioButton yesStudentRadioButton;
@@ -53,11 +52,11 @@ public class MemberFormController implements Initializable {
         noStudentRadioButton.setToggleGroup(studentToggleGroup);
     }
 
+    
     @FXML
     public void handleCreateMember(ActionEvent event) {
         // Get values from UI elements
         String fullName = fullNameField.getText();
-        String phoneNumber = phoneNumberField.getText();
         boolean isStudent = yesStudentRadioButton.isSelected();
         LocalDate birthdate = birthDatePicker.getValue();
         LocalDateTime registeredDate = LocalDateTime.now();
@@ -74,7 +73,7 @@ public class MemberFormController implements Initializable {
         }
 
         // Create the member object
-        Member member = new Member(null, fullName, sex, phoneNumber, birthdate, isStudent, registeredDate, lastMembershipPaymentDate, currentMembershipDue, membershipStatus);
+        MemberIn member = new MemberIn(null, fullName, sex, birthdate, isStudent, registeredDate, lastMembershipPaymentDate, currentMembershipDue, membershipStatus);
 
         // Add the member to the database
         AppQuery appQuery = new AppQuery();

@@ -1,11 +1,9 @@
 package com.model;
 
-//Create New MemberForm model class, and replace this for showing into table
-
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-public class Member {
+public class MemberIn {
     private Integer id;  // Corresponds to `member_id`
     private String fullName;  // Corresponds to `member_name`
     private String sex;  // Corresponds to `member_sex`
@@ -17,11 +15,10 @@ public class Member {
     private LocalDateTime currentMembershipDue;  // Corresponds to `current_membership_due`
     private String membershipStatus;  // To store `membership_status`
 
-    public Member(Integer id, String fullName, String sex, String phoneNumber, LocalDate birthdate, boolean isStudent, LocalDateTime registeredDate, LocalDateTime lastMembershipPaymentDate, LocalDateTime currentMembershipDue, String membershipStatus) {
+    public MemberIn(Integer id, String fullName, String sex, LocalDate birthdate, boolean isStudent, LocalDateTime registeredDate, LocalDateTime lastMembershipPaymentDate, LocalDateTime currentMembershipDue, String membershipStatus) {
         this.id = id;
         this.fullName = fullName;
         this.sex = sex;
-        this.phoneNumber = phoneNumber;
         this.birthdate = birthdate;
         this.isStudent = isStudent;
         this.registeredDate = registeredDate;
@@ -54,14 +51,6 @@ public class Member {
 
     public void setSex(String sex) {
         this.sex = sex;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
     }
 
     public LocalDate getBirthdate() {

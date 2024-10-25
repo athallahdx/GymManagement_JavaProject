@@ -1,0 +1,48 @@
+.side_anchorpane {
+  -fx-background-color: #353a56;
+  -fx-border-width: 2px 2px 2px 2px;
+  -fx-border-radius: 20px;
+  -fx-background-radius: 20px;
+  -fx-border-style: solid;
+}
+
+.inner_pane {
+  -fx-background-color: #748cf1;
+  -fx-border-width: 2px 2px 2px 2px;
+  -fx-border-radius: 20px;
+  -fx-background-radius: 20px;
+  -fx-border-style: solid;
+  -fx-border-color: #748cf1;
+}
+
+.side_button {
+  -fx-background-color: #141313;
+  -fx-border-width: 2px 2px 2px 2px;
+  -fx-border-radius: 20px;
+  -fx-background-radius: 20px;
+  -fx-border-style: solid;
+  -fx-border-color: #141313;
+}
+
+.member_manage_title_label {
+  -fx-font-weight: bold;
+}
+
+.title_pane {
+  -fx-background-color: #748cf1;
+  -fx-border-width: 2px 2px 2px 2px;
+  -fx-border-radius: 20px;
+  -fx-background-radius: 20px;
+  -fx-border-style: solid;
+  -fx-border-color: #748cf1;
+}
+
+.main_vbox {
+  -fx-spacing: 10;
+}
+.button {
+  -fx-spacing: 15;
+}
+.button_action {
+  -fx-background-radius: 20px;
+}
