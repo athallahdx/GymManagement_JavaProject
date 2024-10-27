@@ -23,6 +23,10 @@ public class MemberFormController implements Initializable {
     // FXML elements
     @FXML
     public TextField fullNameField;
+    
+    @FXML
+    public TextField phoneNumberField;
+    
     @FXML
     public RadioButton maleSexRadioButton;
     @FXML
@@ -59,6 +63,7 @@ public class MemberFormController implements Initializable {
         String fullName = fullNameField.getText();
         boolean isStudent = yesStudentRadioButton.isSelected();
         LocalDate birthdate = birthDatePicker.getValue();
+        String phoneNumber = phoneNumberField.getText();
         LocalDateTime registeredDate = LocalDateTime.now();
         LocalDateTime lastMembershipPaymentDate = LocalDateTime.now();
         LocalDateTime currentMembershipDue = lastMembershipPaymentDate.plusDays(30);
@@ -73,7 +78,7 @@ public class MemberFormController implements Initializable {
         }
 
         // Create the member object
-        MemberIn member = new MemberIn(null, fullName, sex, birthdate, isStudent, registeredDate, lastMembershipPaymentDate, currentMembershipDue, membershipStatus);
+        MemberIn member = new MemberIn(null, fullName, sex, birthdate, phoneNumber, isStudent, registeredDate, lastMembershipPaymentDate, currentMembershipDue, membershipStatus);
 
         // Add the member to the database
         AppQuery appQuery = new AppQuery();

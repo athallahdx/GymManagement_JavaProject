@@ -5,23 +5,25 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class MemberOut {
-    private final IntegerProperty id;  // Corresponds to `member_id`
-    private final StringProperty fullName;  // Corresponds to `member_name`
-    private final StringProperty sex;  // Corresponds to `member_sex`
-    private final ObjectProperty<LocalDate> birthdate;  // Corresponds to `member_birthdate`
-    private final BooleanProperty isStudent;  // Corresponds to `member_isstudent`
-    private final ObjectProperty<LocalDateTime> registeredDate;  // Corresponds to `member_registered_date`
-    private final ObjectProperty<LocalDateTime> lastMembershipPaymentDate;  // Corresponds to `last_membership_payment_date`
-    private final ObjectProperty<LocalDateTime> currentMembershipDue;  // Corresponds to `current_membership_due`
-    private final StringProperty membershipStatus;  // To store `membership_status`
+    private final IntegerProperty id;  
+    private final StringProperty fullName;  
+    private final StringProperty sex;  
+    private final ObjectProperty<LocalDate> birthdate;  
+    private final StringProperty phoneNumber;
+    private final BooleanProperty isStudent;
+    private final ObjectProperty<LocalDateTime> registeredDate;  
+    private final ObjectProperty<LocalDateTime> lastMembershipPaymentDate;  
+    private final ObjectProperty<LocalDateTime> currentMembershipDue; 
+    private final StringProperty membershipStatus;  
 
-    public MemberOut(Integer id, String fullName, String sex, LocalDate birthdate, boolean isStudent,
+    public MemberOut(Integer id, String fullName, String sex, LocalDate birthdate, String phoneNumber, boolean isStudent,
                   LocalDateTime registeredDate, LocalDateTime lastMembershipPaymentDate, 
                   LocalDateTime currentMembershipDue, String membershipStatus) {
         this.id = new SimpleIntegerProperty(id);
         this.fullName = new SimpleStringProperty(fullName);
         this.sex = new SimpleStringProperty(sex);
         this.birthdate = new SimpleObjectProperty<>(birthdate);
+        this.phoneNumber = new SimpleStringProperty(phoneNumber);
         this.isStudent = new SimpleBooleanProperty(isStudent);
         this.registeredDate = new SimpleObjectProperty<>(registeredDate);
         this.lastMembershipPaymentDate = new SimpleObjectProperty<>(lastMembershipPaymentDate);
@@ -77,6 +79,18 @@ public class MemberOut {
 
     public void setBirthdate(LocalDate birthdate) {
         this.birthdate.set(birthdate);
+    }
+    
+    public StringProperty phoneNumberProperty() {
+        return phoneNumber;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber.get();
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber.set(phoneNumber);
     }
 
     public BooleanProperty isStudentProperty() {

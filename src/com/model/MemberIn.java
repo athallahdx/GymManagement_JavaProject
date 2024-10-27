@@ -15,11 +15,12 @@ public class MemberIn {
     private LocalDateTime currentMembershipDue;  // Corresponds to `current_membership_due`
     private String membershipStatus;  // To store `membership_status`
 
-    public MemberIn(Integer id, String fullName, String sex, LocalDate birthdate, boolean isStudent, LocalDateTime registeredDate, LocalDateTime lastMembershipPaymentDate, LocalDateTime currentMembershipDue, String membershipStatus) {
+    public MemberIn(Integer id, String fullName, String sex, LocalDate birthdate, String phoneNumber, boolean isStudent, LocalDateTime registeredDate, LocalDateTime lastMembershipPaymentDate, LocalDateTime currentMembershipDue, String membershipStatus) {
         this.id = id;
         this.fullName = fullName;
         this.sex = sex;
         this.birthdate = birthdate;
+        this.phoneNumber = phoneNumber;
         this.isStudent = isStudent;
         this.registeredDate = registeredDate;
         this.lastMembershipPaymentDate = lastMembershipPaymentDate;
@@ -60,6 +61,14 @@ public class MemberIn {
     public void setBirthdate(LocalDate birthdate) {
         this.birthdate = birthdate;
     }
+    
+    public String getPhoneNumber() {
+    	return phoneNumber;
+    }
+    
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
 
     public boolean isStudent() {
         return isStudent;

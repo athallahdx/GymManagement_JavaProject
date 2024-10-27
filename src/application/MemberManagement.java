@@ -1,4 +1,4 @@
-package com.view;
+package application;
 	
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -23,7 +23,7 @@ public class MemberManagement extends Application {
     @Override
     public void start(Stage stage) throws Exception {
     	try {
-    		Parent root = FXMLLoader.load(getClass().getResource("MemberView.fxml"));
+    		Parent root = FXMLLoader.load(getClass().getResource("/com/view/MemberView.fxml"));
     		Scene scene = new Scene(root);
     		stage.setScene(scene);
     		stage.show();

@@ -15,17 +15,18 @@ public class AppQuery {
         try {
             dbc.getDBConn();
             PreparedStatement ps = dbc.getCon().prepareStatement(
-                "INSERT INTO `members`(`member_name`, `member_sex`, `member_birthdate`, `member_isstudent`, `member_registered_date`, `last_membership_payment_date`, `current_membership_due`, `membership_status`) VALUES (?,?,?,?,?,?,?,?)"
+                "INSERT INTO `members`(`member_name`, `member_sex`, `member_birthdate`, `member_phonenumber`, `member_isstudent`, `member_registered_date`, `last_membership_payment_date`, `current_membership_due`, `membership_status`) VALUES (?,?,?,?,?,?,?,?,?)"
             );
 
             ps.setString(1, member.getFullName());
             ps.setString(2, member.getSex());
             ps.setDate(3, java.sql.Date.valueOf(member.getBirthdate()));
-            ps.setBoolean(4, member.isStudent());
-            ps.setTimestamp(5, java.sql.Timestamp.valueOf(member.getRegisteredDate()));
-            ps.setTimestamp(6, java.sql.Timestamp.valueOf(member.getLastMembershipPaymentDate()));
-            ps.setTimestamp(7, java.sql.Timestamp.valueOf(member.getCurrentMembershipDue()));
-            ps.setString(8, member.getMembershipStatus());
+            ps.setString(4, member.getPhoneNumber());
+            ps.setBoolean(5, member.isStudent());
+            ps.setTimestamp(6, java.sql.Timestamp.valueOf(member.getRegisteredDate()));
+            ps.setTimestamp(7, java.sql.Timestamp.valueOf(member.getLastMembershipPaymentDate()));
+            ps.setTimestamp(8, java.sql.Timestamp.valueOf(member.getCurrentMembershipDue()));
+            ps.setString(9, member.getMembershipStatus());
 
             ps.executeUpdate();
         } catch (SQLException e) {
@@ -50,6 +51,7 @@ public class AppQuery {
                     rs.getString("member_name"),
                     rs.getString("member_sex"),
                     rs.getDate("member_birthdate").toLocalDate(),
+                    rs.getString("member_phonenumber"),
                     rs.getBoolean("member_isstudent"),
                     rs.getTimestamp("member_registered_date").toLocalDateTime(),
                     rs.getTimestamp("last_membership_payment_date").toLocalDateTime(),
