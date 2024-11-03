@@ -5,7 +5,6 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ResourceBundle;
 
-import com.model.MemberForm;
 import com.model.MemberOut;
 import com.util.AppQuery;
 
@@ -19,13 +18,15 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 public class MemberController implements Initializable {
-    
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+    	editButton.setDisable(true);
+    	deleteButton.setDisable(true);
         showMembers();
     }
     
@@ -71,6 +72,8 @@ public class MemberController implements Initializable {
     @FXML
     private TableView<MemberOut> tableView;
     
+    private MemberOut member;
+    
     @FXML
     private void showMembers() {
         AppQuery appQuery = new AppQuery();
@@ -88,7 +91,18 @@ public class MemberController implements Initializable {
         colMembershipStatus.setCellValueFactory(cellData -> cellData.getValue().membershipStatusProperty());
         
         tableView.setItems(memberList);
-    }    
+    }
+    
+    @FXML
+    public void mouseClicked(MouseEvent e) {
+    	try {
+        	editButton.setDisable(false);
+        	deleteButton.setDisable(false);
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
+    	
+    }
     
     @FXML
     private void openForm(ActionEvent event) {
@@ -97,6 +111,10 @@ public class MemberController implements Initializable {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/view/MemberForm.fxml"));
             Parent root = loader.load();
 
+            // Get the controller for MemberForm and set the reference of this MemberController instance
+            MemberFormController memberFormController = loader.getController();
+            memberFormController.setMemberController(this); // Pass the current MemberController instance
+            
             // Create a new stage (window) for the form
             Stage stage = new Stage();
             stage.setTitle("Add New Member");
@@ -107,4 +125,8 @@ public class MemberController implements Initializable {
         }
     }
 
+    // Refresh the table after adding a new member
+    public void refreshTable() {
+        showMembers();
+    }
 }

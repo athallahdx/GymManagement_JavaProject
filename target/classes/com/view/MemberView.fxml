@@ -2,7 +2,6 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
@@ -13,12 +12,12 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="636.0" prefWidth="951.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.MemberController">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="765.0" prefWidth="1122.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.MemberController">
    <children>
       <!-- Sidebar -->
       <VBox prefHeight="636.0" prefWidth="260.0">
          <children>
-            <AnchorPane fx:id="side_anchorpane" prefHeight="640.0" prefWidth="260.0" styleClass="side_anchorpane" stylesheets="@MemberView.css">
+            <AnchorPane fx:id="side_anchorpane" prefHeight="766.0" prefWidth="267.0" styleClass="side_anchorpane" stylesheets="@MemberView.css">
                <children>
                   <Pane fx:id="inner_pane" layoutX="30.0" layoutY="27.0" prefHeight="66.0" prefWidth="200.0" styleClass="inner_pane">
                      <children>
@@ -36,9 +35,8 @@
                   </Pane>
 
                   <!-- Sidebar Buttons -->
-                  <VBox layoutX="35.0" layoutY="150.0" spacing="20">
+                  <VBox layoutX="22.0" layoutY="151.0" prefHeight="607.0" prefWidth="190.0" spacing="20">
                      <children>
-
                         <Button fx:id="staffManagementButton" mnemonicParsing="false" prefHeight="58.0" prefWidth="190.0" styleClass="side_button" text="Data Dashboard">
                             <graphic>
                                 <ImageView fitHeight="49.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
@@ -57,7 +55,6 @@
                                 </ImageView>
                             </graphic>
                         </Button>
-                        
                         <Button fx:id="personalTrainerButton" mnemonicParsing="false" prefHeight="58.0" prefWidth="190.0" styleClass="side_button" text="Personal Trainer Management">
                             <graphic>
                                 <ImageView fitHeight="49.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
@@ -67,8 +64,7 @@
                                 </ImageView>
                             </graphic>
                         </Button>
-
-                        <Button fx:id="gymClassButton" mnemonicParsing="false" prefHeight="78.0" prefWidth="190.0" styleClass="side_button" text="Gym Class Management">
+                        <Button fx:id="gymClassButton" mnemonicParsing="false" prefHeight="87.0" prefWidth="190.0" styleClass="side_button" text="Gym Class Management">
                             <graphic>
                                 <ImageView fitHeight="39.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -85,60 +81,53 @@
       </VBox>
 
       <!-- Main Content Area -->
-      <VBox prefHeight="636.0" prefWidth="691.0" styleClass="main_vbox" stylesheets="@MemberView.css">
+      <VBox prefHeight="765.0" prefWidth="923.0" styleClass="main_vbox" stylesheets="@MemberView.css">
          <children>
             <!-- Title Section -->
-            <AnchorPane prefHeight="126.0" prefWidth="714.0" styleClass="title_pane">
+            <AnchorPane prefHeight="92.0" prefWidth="822.0" styleClass="title_pane">
                <children>
-                  <Label graphicTextGap="0.0" layoutX="37.0" prefHeight="66.0" prefWidth="600.0" styleClass="member_manage_title_label" text="  GYM Membership Management" textFill="WHITE">
+                  <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="111.0" layoutY="13.0" prefHeight="66.0" prefWidth="600.0" styleClass="member_manage_title_label" text="  GYM Membership Management" textAlignment="CENTER" textFill="WHITE">
                      <font>
-                        <Font name="Century Gothic" size="35.0" />
+                        <Font name="Century Gothic" size="57.0" />
                      </font>
                   </Label>
                </children>
             </AnchorPane>
 
-            <!-- Action Buttons -->
+                  <!-- Action Buttons -->
             <HBox alignment="CENTER" prefHeight="82.0" prefWidth="651.0" styleClass="button">
                <children>
-                  <Button fx:id="addButton" mnemonicParsing="false" prefHeight="53.0" prefWidth="159.0" styleClass="button_action" onAction="#openForm" text="Add Member" />
+                  <Button fx:id="addButton" mnemonicParsing="false" onAction="#openForm" prefHeight="53.0" prefWidth="159.0" styleClass="button_action" text="Add Member" />
                   <Button fx:id="editButton" mnemonicParsing="false" prefHeight="53.0" prefWidth="159.0" styleClass="button_action" text="Update Member" />
                   <Button fx:id="deleteButton" mnemonicParsing="false" prefHeight="53.0" prefWidth="159.0" styleClass="button_action" text="Delete Member" />
                   <VBox prefHeight="96.0" prefWidth="84.0" styleClass="box_small_button" stylesheets="@MemberView.css">
                      <children>
                         <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="83.0" styleClass="button-action-small" text="Activate" />
-                        <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="86.0" styleClass="button-action-small" text="Unactivate" />
+                        <Button alignment="CENTER" mnemonicParsing="false" prefHeight="27.0" prefWidth="86.0" styleClass="button-action-small" text="Unactivate" />
                      </children>
                   </VBox>
                </children>
             </HBox>
 
             <!-- Table Section -->
-            <ScrollPane fitToWidth="false" hbarPolicy="AS_NEEDED" prefHeight="512.0" prefWidth="750.0" vbarPolicy="AS_NEEDED">
-    <content>
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="457.0" prefWidth="1000.0">
-            <children>
-                <TableView fx:id="tableView" prefHeight="504.0" prefWidth="1000.0" styleClass="table-view">
-                    <columnResizePolicy>
-                        <TableView fx:constant="UNCONSTRAINED_RESIZE_POLICY" />
-                    </columnResizePolicy>
-                    <columns>
-                        <TableColumn fx:id="colId" prefWidth="80.0" text="ID" />
-                        <TableColumn fx:id="colName" prefWidth="118.0" text="Name" />
-                        <TableColumn fx:id="colSex" prefWidth="85.0" text="Gender" />
-                              <TableColumn fx:id="colPhoneNumber" prefWidth="102.0" text="Phone Number" />
-                        <TableColumn fx:id="colBirthDate" prefWidth="130.39996337890625" text="Birth Date" />
-                        <TableColumn fx:id="colIsStudent" prefWidth="60.79998779296875" text="Student" />
-                        <TableColumn fx:id="colRegisteredDate" prefWidth="120.0" text="Registration Date" />
-                        <TableColumn fx:id="colLastMembershipPaymentDate" prefWidth="140.0" text="Last Payment" />
-                        <TableColumn fx:id="colCurrentMembershipDue" prefWidth="120.0" text="Due" />
-                        <TableColumn fx:id="colMembershipStatus" prefWidth="120.0" text="Status" />
-                    </columns>
-                </TableView>
-            </children>
-        </AnchorPane>
-    </content>
-</ScrollPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="521.0" prefWidth="883.0">
+               <children>
+                  <TableView fx:id="tableView" onMouseClicked="#mouseClicked" prefHeight="518.0" prefWidth="848.0" styleClass="table-view">
+                     <columns>
+                        <TableColumn fx:id="colId" prefWidth="44.0" text="ID" />
+                        <TableColumn fx:id="colName" prefWidth="154.39999389648438" text="Name" />
+                        <TableColumn fx:id="colSex" prefWidth="68.00006103515625" text="Gender" />
+                        <TableColumn fx:id="colPhoneNumber" prefWidth="119.99993896484375" text="Phone Number" />
+                        <TableColumn fx:id="colBirthDate" prefWidth="130.4" text="Birth Date" />
+                        <TableColumn fx:id="colIsStudent" prefWidth="50.4000244140625" text="Student" />
+                        <TableColumn fx:id="colRegisteredDate" prefWidth="130.4000244140625" text="Registration Date" />
+                        <TableColumn fx:id="colLastMembershipPaymentDate" prefWidth="167.99993896484375" text="Last Payment" />
+                        <TableColumn fx:id="colCurrentMembershipDue" prefWidth="137.60009765625" text="Due" />
+                        <TableColumn fx:id="colMembershipStatus" prefWidth="92.800048828125" text="Status" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
          </children>
       </VBox>
    </children>

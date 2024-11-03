@@ -1,7 +1,6 @@
 package com.controller;
 
 import com.model.MemberIn;
-import com.model.MemberOut;
 import com.util.AppQuery;
 
 import java.net.URL;
@@ -17,32 +16,39 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
+import javafx.stage.Stage;
 
 public class MemberFormController implements Initializable {
 
-    // FXML elements
     @FXML
-    public TextField fullNameField;
+    private TextField fullNameField;
     
     @FXML
-    public TextField phoneNumberField;
+    private TextField phoneNumberField;
     
     @FXML
-    public RadioButton maleSexRadioButton;
+    private RadioButton maleSexRadioButton;
     @FXML
-    public RadioButton femaleSexRadioButton;
+    private RadioButton femaleSexRadioButton;
     @FXML
-    public DatePicker birthDatePicker;
+    private DatePicker birthDatePicker;
     @FXML
-    public RadioButton yesStudentRadioButton;
+    private RadioButton yesStudentRadioButton;
     @FXML
-    public RadioButton noStudentRadioButton;
+    private RadioButton noStudentRadioButton;
     @FXML
-    public Button btnCreateMember;
+    private Button btnCreateMember;
 
     // ToggleGroups for grouping radio buttons
     private ToggleGroup sexToggleGroup;
     private ToggleGroup studentToggleGroup;
+
+    // Reference to the MemberController
+    private MemberController memberController;
+
+    public void setMemberController(MemberController memberController) {
+        this.memberController = memberController;
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -56,7 +62,6 @@ public class MemberFormController implements Initializable {
         noStudentRadioButton.setToggleGroup(studentToggleGroup);
     }
 
-    
     @FXML
     public void handleCreateMember(ActionEvent event) {
         // Get values from UI elements
@@ -70,12 +75,7 @@ public class MemberFormController implements Initializable {
         String membershipStatus = "Active";
 
         // Determine the selected sex
-        String sex = "";
-        if (maleSexRadioButton.isSelected()) {
-            sex = "Male";
-        } else if (femaleSexRadioButton.isSelected()) {
-            sex = "Female";
-        }
+        String sex = maleSexRadioButton.isSelected() ? "Male" : "Female";
 
         // Create the member object
         MemberIn member = new MemberIn(null, fullName, sex, birthdate, phoneNumber, isStudent, registeredDate, lastMembershipPaymentDate, currentMembershipDue, membershipStatus);
@@ -83,5 +83,13 @@ public class MemberFormController implements Initializable {
         // Add the member to the database
         AppQuery appQuery = new AppQuery();
         appQuery.addMember(member);
+
+        // Refresh the table in MemberController
+        if (memberController != null) {
+            memberController.refreshTable();
+        }
+        
+        // Close the form window after saving
+        ((Stage) btnCreateMember.getScene().getWindow()).close();
     }
 }
