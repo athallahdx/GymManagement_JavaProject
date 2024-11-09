@@ -134,6 +134,7 @@ public class MemberController implements Initializable {
 
                 // Set the scene and show the new window
                 updateStage.show();
+                
             } catch (IOException e) {
                 Alert alert = new Alert(AlertType.ERROR);
                 alert.setTitle("Error");
@@ -142,6 +143,9 @@ public class MemberController implements Initializable {
                 alert.showAndWait();
                 e.printStackTrace();  // Ensure you also print the full stack trace
             }
+			finally {
+				refreshTable();
+			}
         } else {
             // If no member is selected
             Alert alert = new Alert(AlertType.WARNING);
@@ -166,13 +170,80 @@ public class MemberController implements Initializable {
             Stage stage = new Stage();
             stage.setTitle("Add New Member");
             stage.setScene(new Scene(root));
-            stage.show();
+            stage.initModality(Modality.APPLICATION_MODAL);
+
+            stage.showAndWait();  // Show the stage and wait until it is closed
         } catch (Exception e) {
             e.printStackTrace();  // Print stack trace if there's an error
         }
     }
     
+    @FXML
+    public void updateMemberStatusActivate(ActionEvent event) {
+    	try {
+    		member = tableView.getSelectionModel().getSelectedItem();
+    		
+			if (member == null) {
+				Alert alert = new Alert(AlertType.WARNING);
+				alert.setTitle("No Member Selected");
+				alert.setHeaderText("Please select a member to activate.");
+				alert.showAndWait();
+				return;
+			}
+			
+			Alert confirmationAlert = new Alert(AlertType.CONFIRMATION);
+			confirmationAlert.setTitle("Confirm Activation");
+			confirmationAlert.setHeaderText("Are you sure you want to activate this member?");
+			confirmationAlert.setContentText("This action cannot be undone.");
+			
+			Optional<ButtonType> result = confirmationAlert.showAndWait();
+			
+			if (result.isPresent() && result.get() == ButtonType.OK) {
+				AppQuery appQuery = new AppQuery();
+                appQuery.updateMemberStatus(member.getId(), "Activate");
+                refreshTable();
+                System.out.println("Activated member: " + member);
+            } else {
+                System.out.println("Activation canceled");
+			}
+    	} catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     
+    @FXML
+    public void updateMemberStatusDeactivate(ActionEvent event) {
+    	try {
+    		member = tableView.getSelectionModel().getSelectedItem();
+    		
+			if (member == null) {
+				Alert alert = new Alert(AlertType.WARNING);
+				alert.setTitle("No Member Selected");
+				alert.setHeaderText("Please select a member to activate.");
+				alert.showAndWait();
+				return;
+			}
+			
+			Alert confirmationAlert = new Alert(AlertType.CONFIRMATION);
+			confirmationAlert.setTitle("Confirm Deactivation");
+			confirmationAlert.setHeaderText("Are you sure you want to deactivate this member?");
+			confirmationAlert.setContentText("This action cannot be undone.");
+			
+			Optional<ButtonType> result = confirmationAlert.showAndWait();
+			
+			if (result.isPresent() && result.get() == ButtonType.OK) {
+				AppQuery appQuery = new AppQuery();
+				appQuery.updateMemberStatus(member.getId(), "Deactivate");
+				refreshTable();
+				System.out.println("Deactivated member: " + member);
+			} else {
+				System.out.println("Deactivation canceled");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+    		
+    }
     
     @FXML
     public void handleDeleteMember(ActionEvent event) {

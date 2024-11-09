@@ -146,4 +146,43 @@ public class AppQuery {
 		}
     	
     }
+
+	public void updateMemberStatus(int id, String active) {
+		try {
+			dbc.getDBConn();
+			if(active == "Activate") {
+	    		PreparedStatement ps = dbc.getCon().prepareStatement(
+	    		   "UPDATE members " + 
+	    		      "SET " + 
+	    			  "last_membership_payment_date = ?, " +
+	    			  "current_membership_due = ?, " +
+	    			  "membership_status = ? " + 
+	    		      "WHERE member_id = ?"
+	    		);
+	    		ps.setTimestamp(1, java.sql.Timestamp.valueOf(LocalDateTime.now()));
+	    		ps.setTimestamp(2, java.sql.Timestamp.valueOf(LocalDateTime.now().plusDays(31)));
+	    		ps.setString(3, "Active");
+	    		ps.setInt(4, id);
+	    		ps.execute();
+	    		ps.close();
+	    		dbc.closeConnection();	
+			}if(active == "Deactivate") {
+				PreparedStatement ps = dbc.getCon().prepareStatement(
+				   "UPDATE members " +
+				      "SET " + 
+				      "membership_status = ? " + 
+				      "WHERE member_id = ?"
+				);
+				ps.setString(1, "Inactive");
+				ps.setInt(2, id);
+				ps.execute();
+				ps.close();
+            }
+		} catch(Exception exc) {
+			exc.printStackTrace();
+		} finally {
+            dbc.closeConnection();
+        }
+	}
+	
 }

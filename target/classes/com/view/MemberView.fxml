@@ -91,8 +91,8 @@
                         <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#handleDeleteMember" prefHeight="53.0" prefWidth="159.0" styleClass="button_action" text="Delete Member" />
                         <VBox prefHeight="96.0" prefWidth="84.0" styleClass="box_small_button" stylesheets="@MemberView.css">
                            <children>
-                              <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="83.0" styleClass="button-action-small" text="Activate" />
-                              <Button alignment="CENTER" mnemonicParsing="false" prefHeight="27.0" prefWidth="86.0" styleClass="button-action-small" text="Unactivate" />
+                              <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="83.0" styleClass="button-action-small" onAction="#updateMemberStatusActivate" text="Activate" />
+                              <Button alignment="CENTER" mnemonicParsing="false" prefHeight="27.0" prefWidth="86.0" styleClass="button-action-small" onAction="#updateMemberStatusDeactivate" text="Dectivate" />
                            </children>
                         </VBox>
                      </children>

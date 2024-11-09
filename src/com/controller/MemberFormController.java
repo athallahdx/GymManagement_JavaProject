@@ -71,7 +71,7 @@ public class MemberFormController implements Initializable {
         String phoneNumber = phoneNumberField.getText();
         LocalDateTime registeredDate = LocalDateTime.now();
         LocalDateTime lastMembershipPaymentDate = LocalDateTime.now();
-        LocalDateTime currentMembershipDue = lastMembershipPaymentDate.plusDays(30);
+        LocalDateTime currentMembershipDue = lastMembershipPaymentDate.plusDays(31);
         String membershipStatus = "Active";
 
         // Determine the selected sex
