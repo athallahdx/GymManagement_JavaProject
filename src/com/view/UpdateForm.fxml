@@ -12,22 +12,24 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23" fx:id="com.controller.UpdateFormController">
+<AnchorPane xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.UpdateFormController">
    <children>
-      <AnchorPane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" styleClass="form-background">
+      <AnchorPane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="691.0" prefWidth="800.0" styleClass="form-background">
          <children>
             <Label layoutX="60.0" layoutY="20.0" styleClass="form-title" text="EDIT MEMBER">
                <stylesheets>
                   <URL value="@MemberForm.css" />
                </stylesheets>
             </Label>
-            <GridPane hgap="15" layoutX="60.0" layoutY="70.0" prefHeight="350.0" prefWidth="680.0" vgap="20">
+            <GridPane hgap="15" layoutX="42.0" layoutY="67.0" prefHeight="516.0" prefWidth="717.0" vgap="20">
                <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="450.0" />
                </columnConstraints>
                <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
                   <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
                   <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
                   <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
@@ -72,11 +74,6 @@
                         <URL value="@MemberForm.css" />
                      </stylesheets>
                   </Label>
-                  <TextField fx:id="phoneNumberField" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                     <stylesheets>
-                        <URL value="@MemberForm.css" />
-                     </stylesheets>
-                  </TextField>
                   <Label text="Date Of Birth:" GridPane.columnIndex="0" GridPane.rowIndex="3">
                      <stylesheets>
                         <URL value="@MemberForm.css" />
@@ -109,112 +106,78 @@
                         <URL value="@MemberForm.css" />
                      </stylesheets>
                   </HBox>
+                  <Label text="Registered Date:" GridPane.rowIndex="5">
+                     <stylesheets>
+                        <URL value="@MemberForm.css" />
+                     </stylesheets>
+                  </Label>
+                  <Label text="Last Payment Date:" GridPane.rowIndex="6">
+                     <stylesheets>
+                        <URL value="@MemberForm.css" />
+                     </stylesheets>
+                  </Label>
+                  <Label text="Current Membership Due:" GridPane.rowIndex="7">
+                     <stylesheets>
+                        <URL value="@MemberForm.css" />
+                     </stylesheets>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" styleClass="DateTime-HBOX" stylesheets="@MemberForm.css" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <children>
+                        <DatePicker fx:id="registeredDatePicker">
+                           <stylesheets>
+                              <URL value="@MemberForm.css" />
+                           </stylesheets>
+                        </DatePicker>
+                        <TextField fx:id="registeredTimeField">
+                           <stylesheets>
+                              <URL value="@MemberForm.css" />
+                           </stylesheets>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" styleClass="DateTime-HBOX" stylesheets="@MemberForm.css" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                     <children>
+                        <DatePicker fx:id="lastPaymentDatePicker">
+                           <stylesheets>
+                              <URL value="@MemberForm.css" />
+                           </stylesheets>
+                        </DatePicker>
+                        <TextField fx:id="lastPaymentTimeField">
+                           <stylesheets>
+                              <URL value="@MemberForm.css" />
+                           </stylesheets>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" styleClass="DateTime-HBOX" stylesheets="@MemberForm.css" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                     <children>
+                        <DatePicker fx:id="membershipDueDatePicker">
+                           <stylesheets>
+                              <URL value="@MemberForm.css" />
+                           </stylesheets>
+                        </DatePicker>
+                        <TextField fx:id="membershipDueTimeField">
+                           <stylesheets>
+                              <URL value="@MemberForm.css" />
+                           </stylesheets>			
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <TextField fx:id="phoneNumberField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                </children>
                <stylesheets>
                   <URL value="@MemberForm.css" />
                </stylesheets>
             </GridPane>
+            <Button fx:id="btnUpdateMember" layoutX="564.0" layoutY="634.0" onAction="#handleUpdateMember" styleClass="button-primary" text="Update Member">
+               <stylesheets>
+                  <URL value="@MemberForm.css" />
+               </stylesheets>
+            </Button>
          </children>
          <stylesheets>
             <URL value="@MemberForm.css" />
          </stylesheets>
       </AnchorPane>
-      <GridPane hgap="15" layoutX="70.0" layoutY="80.0" prefHeight="350.0" prefWidth="680.0" vgap="20">
-         <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="450.0" />
-         </columnConstraints>
-         <rowConstraints>
-            <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
-         </rowConstraints>
-         <children>
-            <Label text="Full Name:" GridPane.columnIndex="0" GridPane.rowIndex="0">
-               <stylesheets>
-                  <URL value="@MemberForm.css" />
-               </stylesheets>
-            </Label>
-            <TextField fx:id="fullNameField" GridPane.columnIndex="1" GridPane.rowIndex="0">
-               <stylesheets>
-                  <URL value="@MemberForm.css" />
-               </stylesheets>
-            </TextField>
-            <Label text="Sex:" GridPane.columnIndex="0" GridPane.rowIndex="1">
-               <stylesheets>
-                  <URL value="@MemberForm.css" />
-               </stylesheets>
-            </Label>
-            <HBox alignment="CENTER_LEFT" spacing="20" GridPane.columnIndex="1" GridPane.rowIndex="1">
-               <children>
-                  <RadioButton fx:id="maleSexRadioButton" text="Male">
-                     <stylesheets>
-                        <URL value="@MemberForm.css" />
-                     </stylesheets>
-                  </RadioButton>
-                  <RadioButton fx:id="femaleSexRadioButton" text="Female">
-                     <stylesheets>
-                        <URL value="@MemberForm.css" />
-                     </stylesheets>
-                  </RadioButton>
-               </children>
-               <stylesheets>
-                  <URL value="@MemberForm.css" />
-               </stylesheets>
-            </HBox>
-            <Label text="Phone Number:" GridPane.columnIndex="0" GridPane.rowIndex="2">
-               <stylesheets>
-                  <URL value="@MemberForm.css" />
-               </stylesheets>
-            </Label>
-            <TextField fx:id="phoneNumberField" GridPane.columnIndex="1" GridPane.rowIndex="2">
-               <stylesheets>
-                  <URL value="@MemberForm.css" />
-               </stylesheets>
-            </TextField>
-            <Label text="Date Of Birth:" GridPane.columnIndex="0" GridPane.rowIndex="3">
-               <stylesheets>
-                  <URL value="@MemberForm.css" />
-               </stylesheets>
-            </Label>
-            <DatePicker fx:id="birthDatePicker" GridPane.columnIndex="1" GridPane.rowIndex="3">
-               <stylesheets>
-                  <URL value="@MemberForm.css" />
-               </stylesheets>
-            </DatePicker>
-            <Label text="Is Student:" GridPane.columnIndex="0" GridPane.rowIndex="4">
-               <stylesheets>
-                  <URL value="@MemberForm.css" />
-               </stylesheets>
-            </Label>
-            <HBox alignment="CENTER_LEFT" spacing="20" GridPane.columnIndex="1" GridPane.rowIndex="4">
-               <children>
-                  <RadioButton fx:id="yesStudentRadioButton" text="Yes">
-                     <stylesheets>
-                        <URL value="@MemberForm.css" />
-                     </stylesheets>
-                  </RadioButton>
-                  <RadioButton fx:id="noStudentRadioButton" text="No">
-                     <stylesheets>
-                        <URL value="@MemberForm.css" />
-                     </stylesheets>
-                  </RadioButton>
-               </children>
-               <stylesheets>
-                  <URL value="@MemberForm.css" />
-               </stylesheets>
-            </HBox>
-         </children>
-         <stylesheets>
-            <URL value="@MemberForm.css" />
-         </stylesheets>
-      </GridPane>
-      <Button fx:id="btnCreateMember" layoutX="584.0" layoutY="444.0" onAction="#handleCreateMember" styleClass="button-primary" text="Update Member">
-         <stylesheets>
-            <URL value="@MemberForm.css" />
-         </stylesheets>
-      </Button>
    </children>
 </AnchorPane>

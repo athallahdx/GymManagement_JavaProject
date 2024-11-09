@@ -36,6 +36,36 @@ public class AppQuery {
         }
     }
     
+    public MemberIn getMember(int memberId) {
+        MemberIn member = null;
+        try {
+            dbc.getDBConn();
+            PreparedStatement ps = dbc.getCon().prepareStatement("SELECT * FROM members WHERE member_id = ?");
+            ps.setInt(1, memberId);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                // Convert SQL types to Java types for the constructor
+                member = new MemberIn(
+                    rs.getInt("member_id"),                                 // id
+                    rs.getString("member_name"),                             // fullName
+                    rs.getString("member_sex"),                              // sex
+                    rs.getDate("member_birthdate").toLocalDate(),            // birthdate
+                    rs.getString("member_phonenumber"),                      // phoneNumber
+                    rs.getBoolean("member_isstudent"),                       // isStudent
+                    rs.getTimestamp("member_registered_date").toLocalDateTime(), // registeredDate
+                    rs.getTimestamp("last_membership_payment_date").toLocalDateTime(), // lastMembershipPaymentDate
+                    rs.getTimestamp("current_membership_due").toLocalDateTime(), // currentMembershipDue
+                    rs.getString("membership_status")                        // membershipStatus
+                );
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return member;
+    }
+
+
+    
     public ObservableList<MemberOut> getMemberList() {
         ObservableList<MemberOut> members = FXCollections.observableArrayList();
         try {
@@ -70,27 +100,44 @@ public class AppQuery {
         }
         return members;
     }
-
-    public void editMember(MemberIn member) {
+    
+	public void deleteMember(int memberId) {
+        try {
+            dbc.getDBConn();
+            PreparedStatement ps = dbc.getCon().prepareStatement("DELETE FROM members WHERE member_id = ?");
+            ps.setInt(1, memberId);
+            ps.executeUpdate();
+            ps.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+	}
+    
+    public void updateMember(MemberIn member) {
     	try {
     		dbc.getDBConn();
-    		PreparedStatement ps = dbc.getCon().prepareStatement("UPDATE `members` \n" 
-    				+ "SET \n"
-    				+ "`member_name` = ?,\n"
-    				+ "`member_sex` = ?,\n"
-    				+ "`member_birthdate` = ?,\n"
-    				+ "`member_phonenumber` = ?,\n"
-    				+ "`member_isstudent` = ?,\n"
-    				+ "`member_registered_date` = ?,\n"
-    				+ "`last_membership_payment_date` = ?,\n"
-    				+ "`current_membership_due` = ?,\n"
-    				+ "`membership_status` = ?"
-    				+ "WHERE member_id = ?");
+    		PreparedStatement ps = dbc.getCon().prepareStatement(
+    		"UPDATE members " +
+                 "SET " +
+                 "member_name = ?, " +
+                 "member_sex = ?, " +
+                 "member_birthdate = ?, " +
+                 "member_phonenumber = ?, " +
+                 "member_isstudent = ?, " +
+                 "member_registered_date = ?, " +
+                 "last_membership_payment_date = ?, " +
+                 "current_membership_due = ? " +
+                 "WHERE member_id = ?"
+    		);
             ps.setString(1, member.getFullName());
             ps.setString(2, member.getSex());
             ps.setDate(3, java.sql.Date.valueOf(member.getBirthdate()));
             ps.setString(4, member.getPhoneNumber());
             ps.setBoolean(5, member.isStudent());
+            ps.setTimestamp(6, java.sql.Timestamp.valueOf(member.getRegisteredDate()));
+            ps.setTimestamp(7, java.sql.Timestamp.valueOf(member.getLastMembershipPaymentDate()));
+            ps.setTimestamp(8, java.sql.Timestamp.valueOf(member.getCurrentMembershipDue()));
+            ps.setInt(9, member.getId());
     		ps.execute();
     		ps.close();
     		dbc.closeConnection();	

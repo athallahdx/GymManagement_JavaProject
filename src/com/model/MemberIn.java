@@ -15,6 +15,18 @@ public class MemberIn {
     private LocalDateTime currentMembershipDue;  // Corresponds to `current_membership_due`
     private String membershipStatus;  // To store `membership_status`
 
+    public MemberIn(Integer id, String fullName, String sex, LocalDate birthdate, String phoneNumber, boolean isStudent, LocalDateTime registeredDate, LocalDateTime lastMembershipPaymentDate, LocalDateTime currentMembershipDue) {
+        this.id = id;
+        this.fullName = fullName;
+        this.sex = sex;
+        this.birthdate = birthdate;
+        this.phoneNumber = phoneNumber;
+        this.isStudent = isStudent;
+        this.registeredDate = registeredDate;
+        this.lastMembershipPaymentDate = lastMembershipPaymentDate;
+        this.currentMembershipDue = currentMembershipDue;
+    }
+    
     public MemberIn(Integer id, String fullName, String sex, LocalDate birthdate, String phoneNumber, boolean isStudent, LocalDateTime registeredDate, LocalDateTime lastMembershipPaymentDate, LocalDateTime currentMembershipDue, String membershipStatus) {
         this.id = id;
         this.fullName = fullName;

@@ -67,6 +67,10 @@ TextField:focused, DatePicker:focused {
     -fx-effect: none;
 }
 
+.DateTime-HBOX {
+    -fx-spacing: 30px;  /* Modify the spacing value as needed */
+}
+
 HBox > .radio-button {
     -fx-font-family: "Arial";
     -fx-font-size: 16px;
